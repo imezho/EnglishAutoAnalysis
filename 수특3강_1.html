@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수특 3강 [1] — 선정고 내신 대비</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm 12mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #2D3436; font-size: 9pt; line-height: 1.55; background: #fff; }
+
+  .title-bar { background: linear-gradient(135deg, #0C1821 0%, #1B3A4B 100%); color: #fff; padding: 16px 20px 12px; border-radius: 8px 8px 0 0; }
+  .title-bar h1 { font-size: 15pt; font-weight: 800; letter-spacing: -0.3px; }
+  .title-sub { background: #162B37; color: #7F8C9B; padding: 5px 20px 7px; font-size: 8pt; border-radius: 0 0 8px 8px; margin-bottom: 10px; }
+
+  .pass-hdr { padding: 9px 16px; color: #fff; font-size: 11pt; font-weight: 700; margin-top: 14px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .pass-hdr .tag { font-size: 8.5pt; font-weight: 400; opacity: 0.85; }
+  .p1 { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+  .p2 { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+
+  .core-box { padding: 9px 16px; font-size: 10pt; font-weight: 700; border-left: 4px solid; }
+  .core-box.b1 { background: #EFF6FF; border-color: #3B82F6; color: #1E3A5F; }
+  .core-box.b2 { background: #F0FDFA; border-color: #14B8A6; color: #134E4A; }
+
+  .row { display: flex; border-bottom: 1px solid #E8ECF0; }
+  .row-label { width: 74px; min-width: 74px; background: #F1F5F9; padding: 7px 6px; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.35; }
+  .row-label.c1 { color: #2563EB; }
+  .row-label.c2 { color: #0D9488; }
+  .row-label.cw { color: #D97706; }
+  .row-body { flex: 1; display: flex; }
+  .row-col { flex: 1; padding: 7px 10px; font-size: 8.5pt; line-height: 1.55; border-left: 1px solid #E8ECF0; }
+
+  .red { color: #DC2626; font-weight: 600; }
+  .green { color: #059669; font-weight: 600; }
+  .gray { color: #9CA3AF; }
+  .purple { color: #7C3AED; }
+  b { font-weight: 700; }
+
+  .sogo { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+  .sogo .row-label { background: #FEF3C7; }
+  .wrong { background: #FEF2F2; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; line-height: 1.45; }
+  .wrong-tag { color: #DC2626; font-size: 7.5pt; font-weight: 700; }
+  .right { background: #ECFDF5; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; border-left: 3px solid #059669; line-height: 1.45; }
+
+  .guide { background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 9px 14px; margin-top: 6px; border-radius: 0 4px 4px 0; }
+  .guide h3 { color: #7C3AED; font-size: 9pt; margin-bottom: 4px; }
+  .guide li { font-size: 8pt; line-height: 1.55; margin-bottom: 2px; }
+  .guide ul { padding-left: 16px; }
+
+  .tag-g, .tag-v { display: inline-block; white-space: nowrap; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 700; text-align: center; min-width: 32px; }
+  .tag-g { background: #ECFDF5; color: #059669; }
+  .tag-v { background: #FEF2F2; color: #DC2626; }
+
+  .gv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .gv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .gv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .gv-table tr:nth-child(even) { background: #F8FAFC; }
+  .gv-table td:nth-child(5) { text-align: center; white-space: nowrap; }
+  .stars { font-weight: 700; white-space: nowrap; }
+  .s5 { color: #DC2626; }
+  .s4 { color: #D97706; }
+  .s3 { color: #9CA3AF; }
+
+  .sv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .sv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .sv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .sv-table tr:nth-child(even) { background: #F8FAFC; }
+  .warn-cell { background: #FEF2F2; color: #DC2626; font-weight: 600; font-size: 7.5pt; line-height: 1.45; }
+
+  .page-break { page-break-before: always; }
+  .mt { margin-top: 12px; }
+  .sogo-title { font-size: 8.5pt; font-weight: 700; margin-bottom: 4px; }
+
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: #F1F5F9; border-radius: 6px; margin-bottom: 10px; font-size: 8.5pt; }
+  .nav a { color: #2563EB; text-decoration: none; font-weight: 600; }
+  .nav a:hover { text-decoration: underline; }
+  .nav .current { color: #64748B; font-weight: 400; }
+  .nav-bottom { margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="index.html">← 메인 페이지</a>
+  <span class="current">수특 3강 [1]</span>
+  <a href="수특3강_2.html">수특 3강 [2] →</a>
+</div>
+
+<!-- ===== PAGE 1 ===== -->
+<div class="title-bar"><h1>수특 3강 [1] — 함축적 의미 파악</h1></div>
+<div class="title-sub">2027 수능특강 영어 · 내신 변형 대비 · 선지 소거 연습 · 100점 목표</div>
+
+<!-- PASSAGE 1 -->
+<div class="pass-hdr p1">❶ Digital Platforms & Less Sticky Work <span class="tag">[Part 1] 수능 21번 · 함축적 의미</span></div>
+<div class="core-box b1">💡 디지털 플랫폼은 일(work)을 특정 장소에서 분리시켜, 사업의 공간적 유연성을 극대화했다.</div>
+
+<div class="row">
+  <div class="row-label c1">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>과거 아웃소싱</b><br>→ 콜센터를 통째로 이전<br>→ 대규모, 장소 고정<br>→ cheap and distant 노동시장</div>
+    <div class="row-col"><b>클라우드워크 (현재)</b><br>→ 개인 단위로 쪼개서 고용<br>→ 장소 무관, 흔적 없음<br>→ no offices · no regulations · no traces</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">밑줄<br>표현</div>
+  <div class="row-body">
+    <div class="row-col"><b>"made a lot of work less sticky"</b><br>= 일이 특정 장소에 덜 묶이게 만들었다<br><br><span class="red">★ sticky = 끈적끈적한(직역) → 고정된(함축)</span><br><span class="gray">= intangible (무형의, 만질 수 없는)</span></div>
+    <div class="row-col"><b>정답 ②: elevated the spatial flexibility in conducting business</b><br><br><span class="gray">× ① locational dilemma → "해결"이 아님, "유연성 확대"</span><br><span class="gray">× ③ geographical expansion → "확장"이 아님, "탈장소화"</span><br><span class="gray">× ⑤ less complicated hiring → 채용 간소화는 논점 아님</span></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [주제]로 나온다면?</div>
+      <div class="right">✓ 디지털 플랫폼이 일의 장소적 유연성을 높인 방식<br><span class="green" style="font-size:7.5pt">대상(platform) + 관점(spatial flexibility) 모두 일치</span></div>
+      <div class="wrong">× 아웃소싱의 역사적 발전 과정 <span class="wrong-tag">— 범위 과대</span><br><span style="font-size:7pt; color:#6B7280">글은 "역사" 전체가 아니라 클라우드워크와의 대비만 다룸</span></div>
+      <div class="wrong">× 디지털 노동 시장의 윤리적 문제 <span class="wrong-tag">— 근거 부재</span><br><span style="font-size:7pt; color:#6B7280">윤리/규제는 언급만 될 뿐 논점이 아님</span></div>
+      <div class="wrong">× 글로벌 기업의 비용 절감 전략 <span class="wrong-tag">— 관점 이탈</span><br><span style="font-size:7pt; color:#6B7280">비용 절감이 아니라 "장소 무관성"이 핵심</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ When Work Breaks Free from Place<br><span class="green" style="font-size:7.5pt">대상(work) + 관점(탈장소화) 일치</span></div>
+      <div class="wrong">× The Evolution of Global Outsourcing <span class="wrong-tag">— 범위 과대</span></div>
+      <div class="wrong">× Digital Platforms: A New Business Model <span class="wrong-tag">— 관점 부족</span><br><span style="font-size:7pt; color:#6B7280">"어떤" 새로운 모델인지(=공간적 유연성) 안 나옴</span></div>
+      <div class="wrong">× The Hidden Cost of Cloudwork <span class="wrong-tag">— 방향 반대</span><br><span style="font-size:7pt; color:#6B7280">비용/문제가 아니라 유연성의 "확대"를 서술</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> 제목 오답은 ① 대상 맞는데 관점 틀림 ② 관점 맞는데 대상이 넓음/좁음. 이 패턴으로 2개 즉시 소거.</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">출제<br>전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[요지]</b> 바뀐 것은 규모 ✗ → 단위(granularity)<br><b>[내용일치]</b> "사무실 불필요" "현지 규제 無" "세금 無" 뒤집기<br><b>[요약]</b> outsourcing(대규모) → cloudwork(소규모) 대비 구조</div>
+    <div class="row-col"><b>[어법]</b> are observed(수동) / by sending(by+V-ing)<br><b>[어휘]</b> sticky ↔ flexible / disconnected ↔ connected<br><b>[순서]</b> 과거 → But 클라우드워크 → 결과(흔적 없음)</div>
+  </div>
+</div>
+
+<div class="guide">
+  <h3>📝 변형문제 풀 때 이것만 확인</h3>
+  <ul>
+    <li><b>유형 바뀌었으면</b> → 핵심 1문장으로 돌아가서 선지 대조. "탈장소화"가 빠진 선지는 소거.</li>
+    <li><b>미세 치환</b> → sticky→rigid, disconnected→isolated 같은 유사어가 정답을 바꾸는지.</li>
+    <li><b>틀린 후 복기</b> → <span class="red">"범위/강도/방향/근거부재"</span> 중 어디에 빠졌는지 1단어로 적기.</li>
+  </ul>
+</div>
+
+<!-- PASSAGE 2 -->
+<div class="pass-hdr p2">❷ Microclimate Control in Gardening <span class="tag">[Part 1] 03 함축적 의미 #1</span></div>
+<div class="core-box b2">💡 야외 기후는 통제 밖이라 여겨지지만, 미기후 수준에서는 국지적 온도 조절이 가능하고 효과적이다.</div>
+
+<div class="row">
+  <div class="row-label c2">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>통념 (서론)</b><br>→ 기후 = beyond the control of man<br>→ "usually regarded as" = 일반적 인식</div>
+    <div class="row-col"><b>반전 (본론)</b><br>→ localized temperature control is <b>sometimes</b> effective<br>→ 미기후 수준에서는 조절 가능! (강도: "항상"은 아님)</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">밑줄 표현<br>+ 함축</div>
+  <div class="row-body">
+    <div class="row-col"><b>"cheated God"</b><br>= 하나님을 속였다 (직역)<br>→ <b>자연의 한계를 극복했다</b> (함축)<br><br><span class="red">★ 이웃이 남보다 훨씬 빨리 작물을 수확한 것에 대한 감탄/놀라움의 비유적 표현</span><br><span class="gray">cheat의 부정적 뉘앙스를 비유적 감탄으로 뒤집은 게 포인트</span></div>
+    <div class="row-col"><b>구체적 방법 (세부사실 → 내용일치 소재):</b><br>• Vancouver: 위도 49도선 북쪽, Minot보다 ~60mi 더 북<br>• 태평양 푄 바람(foehn) → 겨울 온화+습함 (일조량 scant)<br>• 남향 경사면 (banked toward the south)<br>• 식물 사이를 납작한 돌(flat stones)로 덮음<br>• 목적: 약한 태양열로 토양 가열 극대화</div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 기후 전체는 통제 불가능하지만, 소규모 미기후 조절은 효과적일 수 있다<br><span class="green" style="font-size:7.5pt">통념 + 반전 + 강도(sometimes) 모두 반영</span></div>
+      <div class="wrong">× 기후 변화에 대응하기 위해 다양한 농업 기술을 개발해야 한다 <span class="wrong-tag">— 범위+방향</span><br><span style="font-size:7pt; color:#6B7280">기후 "변화"도 아니고, "개발해야 한다"는 처방도 아님</span></div>
+      <div class="wrong">× 자연환경은 인간의 통제를 벗어나므로 겸손한 태도가 필요하다 <span class="wrong-tag">— 전환어 무시</span><br><span style="font-size:7pt; color:#6B7280">서론(통념)만 반영하고 But 이후 반전을 놓침</span></div>
+      <div class="wrong">× 온도 조절은 항상 농업 생산성을 높인다 <span class="wrong-tag">— 강도 과장</span><br><span style="font-size:7pt; color:#6B7280">"sometimes effective" ≠ "항상 높인다"</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Small-Scale Climate Control: Beyond What Seems Impossible<br><span class="green" style="font-size:7.5pt">대상(소규모 기후 조절) + 관점(불가능 극복) 일치</span></div>
+      <div class="wrong">× Understanding Global Climate Patterns <span class="wrong-tag">— 범위 과대</span></div>
+      <div class="wrong">× The Gardener Who Defied Nature <span class="wrong-tag">— 범위 축소</span><br><span style="font-size:7pt; color:#6B7280">이웃 이야기는 예시일 뿐, 주제가 아님</span></div>
+      <div class="wrong">× Why Temperature Matters More Than Sunlight <span class="wrong-tag">— 근거 부재</span><br><span style="font-size:7pt; color:#6B7280">온도 vs 일조량 비교는 글의 논점이 아님</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> "But/However 뒤가 진짜 주제." 서론 통념을 주제로 착각하는 게 가장 흔한 함정.</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">출제<br>전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> Vancouver 위치, 돌 용도, 경사 방향 뒤집기<br><b>[요약]</b> 빈칸: microclimate / localized / effective<br><b>[순서/삽입]</b> 통념 → But(사례) → 결론 3단 구조</div>
+    <div class="row-col"><b>[어법]</b> in which / be regarded as / was covered with / 비교급 than<br><b>[어휘]</b> scant ↔ abundant / bank(다의어) / cheated(비유)</div>
+  </div>
+</div>
+
+<div class="guide">
+  <h3>📝 변형문제 풀 때 이것만 확인</h3>
+  <ul>
+    <li><b>"통념 → 반전" 구조:</b> 유형이 바뀌어도 이 대조는 불변. 서론 통념을 정답으로 골랐다면 100% 함정.</li>
+    <li><b>세부사실:</b> 49th parallel / ~60mi / nearby beach / south → 내용일치에서 하나만 바꿔 출제.</li>
+    <li><b>sometimes/usually:</b> 변형에서 이걸 빼거나 "always"로 바꾸면 오답. 항상 체크.</li>
+  </ul>
+</div>
+
+
+<!-- ===== PAGE 2: 어법·어휘 ===== -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 3강 [1] — 어법·어휘</h1></div>
+<div class="title-sub">★★★★★ 거의 확실 · ★★★★☆ 높음 · ★★★☆☆ 보통 · <span style="color:#059669">■ 어법</span> · <span style="color:#DC2626">■ 어휘</span></div>
+
+<table class="gv-table">
+<thead>
+<tr><th style="width:55px">지문</th><th style="width:44px">구분</th><th>원문 표현</th><th>변형 시 헷갈리는 이유</th><th style="width:52px">위험도</th></tr>
+</thead>
+<tbody>
+<tr><td rowspan="3"><b>Digital<br>Platforms</b></td><td><span class="tag-g">어법</span></td><td>no local regulations <b>are observed</b></td><td>수동→능동 치환: observe로 바꾸면 "규정이 관찰한다"가 되어 의미 역전.<br><span class="red">"규정이 지켜진다" vs "규정이 관찰한다"는 완전히 다름</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td>the employer <b>leaves behind</b> no material traces</td><td>동사+부사 분리 구조. leaves behind no~에서 no가 목적어 앞.<br><span class="red">어순 배열 서술형 소재로 위험</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>sticky</b> = 고정된</td><td>less sticky = 덜 고정적 → spatial flexibility.<br><span class="red">rigid(물리적 경직) vs sticky(관성적 고정)는 뉘앙스가 달라서 바꿔 낼 수 있음</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td rowspan="6"><b>Micro-<br>climate</b></td><td><span class="tag-g">어법</span></td><td>is usually <b>regarded as</b> beyond the control</td><td>regarded → regarding 치환이 가장 흔한 함정.<br><span class="red">be regarded as + 보어 (5형식 수동태). as 뒤에 명사구 오는 구조</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td>The bed <b>in which</b> the vegetables grew</td><td>in which → which 치환 = 전치사 탈락 오류.<br><span class="red">grew는 자동사 → 뒤에 목적어 없음 → "grew 뒤가 완전?" 체크</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td>was <b>covered with</b> stones <b>gathered</b></td><td>이중 함정: ① covered→covering (수동→능동)<br>② gathered→gathering (과거분사→현재분사)<br><span class="red">둘 다 "모이는/덮는" 게 아니라 "모아진/덮인" 것 (주어는 행위자 아님)</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>bank</b> = 경사지게 하다</td><td>다의어: 은행/둑/경사. "was banked toward the south" 해석 못하면<br><span class="red">내용일치에서 "방향"을 잘못 잡을 위험</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>scant</b> = 부족한</td><td>sunshine is scant = 일조량 부족. 내용일치에서 "충분하다"로 뒤집기 가능.<br><span class="red">scant ↔ abundant / sufficient 대조</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>cheated</b> (비유: 극복하다)</td><td>"cheated God" = 자연 극복. 어휘 적절성에서 cheated → defeated/overcame 치환 가능.<br><span class="red">직역(속이다)으로 해석하면 함정에 빠짐</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+</tbody>
+</table>
+
+
+<!-- ===== PAGE 3: 서술형 ===== -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 3강 [1] — 서술형 대비</h1></div>
+<div class="title-sub">원문 그대로 ✗ → 변형되어 나올 때 실수하기 쉬운 구조 중심 · 오타 1개 = -0.5~1점</div>
+
+<table class="sv-table" style="margin-top: 8px">
+<thead>
+<tr><th style="width:55px">지문</th><th>핵심 문장 (변형 소재)</th><th style="width:105px">변형 방식 예시</th><th style="width:100px">⚠ 감점 포인트</th></tr>
+</thead>
+<tbody>
+<tr><td rowspan="3"><b>Digital<br>Platforms</b></td><td>Digital platforms have <b>made</b> a lot of work <b>less sticky</b>.</td><td>• 능동→수동 전환<br>• "less sticky" 빈칸<br>• 시제 변경(현완→과거)</td><td class="warn-cell">• sticky 철자<br>• have made (현완)<br>• less + 형용사 어순</td></tr>
+<tr><td>ties between service work and particular places can be <b>disconnected</b>.</td><td>• 주어 바꿔치기<br>• disconnected 어휘<br>• 능동형으로 재영작</td><td class="warn-cell">• ties (복수형!)<br>• between A and B<br>• disconnected 철자</td></tr>
+<tr><td>the employer <b>leaves behind</b> no material traces in the places <b>where</b> it was once an employer.</td><td>• 어순 배열형 유력<br>• where→which 교정<br>• 조건형(주어진 단어)</td><td class="warn-cell">• leaves behind 어순!<br>• no material traces<br>• where (관계부사)</td></tr>
+<tr><td rowspan="3"><b>Micro-<br>climate</b></td><td>localized <b>temperature</b> control is sometimes <b>effective</b> on a microclimate scale.</td><td>• 핵심문장 영작<br>• effective→efficient 교정<br>• sometimes 위치 변경</td><td class="warn-cell">• localized 철자<br>• temperature 철자<br>• effective ≠ efficient</td></tr>
+<tr><td>The bed <b>in which</b> the vegetables grew was <b>banked</b> toward the south.</td><td>• in which→which 교정<br>• 어순 배열형<br>• 수동→능동 전환 영작</td><td class="warn-cell">• in which (전+관대)<br>• was banked (수동태)<br>• toward 철자</td></tr>
+<tr><td>the area was <b>covered with</b> flat stones <b>gathered</b> from the nearby beach.</td><td>• gathered→gathering 교정<br>• 수동태 구문 영작<br>• 전치사(with) 빈칸</td><td class="warn-cell">• was covered with<br>• gathered (과거분사)<br>• nearby (한 단어!)</td></tr>
+</tbody>
+</table>
+
+<div class="guide mt">
+  <h3>🎯 선정고 시험 패턴 기반 — 서술형 변형 예상</h3>
+  <ul>
+    <li><b>어법 교정형:</b> "The bed which the vegetables grew" → <b>which → in which</b> / "the area was covering with stones" → <b>covering → covered</b></li>
+    <li><b>배열형:</b> "leaves behind / the employer / no material traces / in the places / where" → <b>leaves behind 위치</b>가 핵심</li>
+    <li><b>조건형 영작:</b> 주어진 단어로 영작 → <b>조건 먼저 읽고 → 어순 → 문법 → 철자</b> 순 4단 확인</li>
+    <li><b>내용 요약 서술형:</b> 핵심 1문장 기반, 원문 그대로 베끼면 감점 → 패러프레이즈 연습 필수</li>
+  </ul>
+</div>
+
+<div class="nav nav-bottom">
+  <a href="index.html">← 메인 페이지</a>
+  <span class="current">수특 3강 [1]</span>
+  <a href="수특3강_2.html">수특 3강 [2] →</a>
+</div>
+
+</body>
+</html>
