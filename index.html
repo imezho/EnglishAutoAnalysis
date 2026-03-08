@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -8,40 +9,41 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #2D3436; background: #F8F9FA; min-height: 100vh; }
 
-  .header { background: linear-gradient(135deg, #0C1821 0%, #1B3A4B 100%); color: #fff; padding: 32px 24px 24px; text-align: center; }
-  .header h1 { font-size: 20pt; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
-  .header p { color: #7F8C9B; font-size: 10pt; }
+.header { background: linear-gradient(135deg, #0C1821 0%, #1B3A4B 100%); color: #fff; padding: 32px 24px 24px; text-align: center; }
+.header h1 { font-size: 20pt; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+.header p { color: #7F8C9B; font-size: 10pt; }
 
-  .container { max-width: 720px; margin: 0 auto; padding: 20px 16px 40px; }
+.container { max-width: 720px; margin: 0 auto; padding: 20px 16px 40px; }
 
-  .section { margin-bottom: 24px; }
-  .section-title { font-size: 12pt; font-weight: 800; padding: 8px 0 6px; border-bottom: 2px solid #222; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-  .section-title .badge { background: #2563EB; color: #fff; font-size: 8pt; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+.section { margin-bottom: 24px; }
+.section-title { font-size: 12pt; font-weight: 800; padding: 8px 0 6px; border-bottom: 2px solid #222; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.section-title .badge { background: #2563EB; color: #fff; font-size: 8pt; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
 
-  .card { display: block; background: #fff; border: 1px solid #E8ECF0; border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; text-decoration: none; color: #2D3436; transition: all 0.15s; }
-  .card:hover { border-color: #2563EB; box-shadow: 0 2px 8px rgba(37,99,235,0.1); }
-  .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-  .card-title { font-size: 10.5pt; font-weight: 700; }
-  .card-status { font-size: 7.5pt; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
-  .card-status.done { background: #ECFDF5; color: #059669; }
-  .card-status.soon { background: #FEF3C7; color: #D97706; }
-  .card-status.wait { background: #F1F5F9; color: #94A3B8; }
-  .card-desc { font-size: 8.5pt; color: #6B7280; line-height: 1.5; }
-  .card-tags { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
-  .card-tag { font-size: 7pt; padding: 1px 6px; border-radius: 3px; background: #F1F5F9; color: #64748B; }
+.card { display: block; background: #fff; border: 1px solid #E8ECF0; border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; text-decoration: none; color: #2D3436; transition: all 0.15s; }
+.card:hover { border-color: #2563EB; box-shadow: 0 2px 8px rgba(37,99,235,0.1); }
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.card-title { font-size: 10.5pt; font-weight: 700; }
+.card-status { font-size: 7.5pt; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+.card-status.done { background: #ECFDF5; color: #059669; }
+.card-status.soon { background: #FEF3C7; color: #D97706; }
+.card-status.wait { background: #F1F5F9; color: #94A3B8; }
+.card-desc { font-size: 8.5pt; color: #6B7280; line-height: 1.5; }
+.card-tags { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+.card-tag { font-size: 7pt; padding: 1px 6px; border-radius: 3px; background: #F1F5F9; color: #64748B; }
 
-  .info-box { background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 12px 16px; border-radius: 0 6px 6px 0; margin-top: 20px; }
-  .info-box h3 { font-size: 10pt; color: #7C3AED; margin-bottom: 4px; }
-  .info-box p, .info-box li { font-size: 8.5pt; line-height: 1.6; color: #555; }
-  .info-box ul { padding-left: 16px; margin-top: 4px; }
+.info-box { background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 12px 16px; border-radius: 0 6px 6px 0; margin-top: 20px; }
+.info-box h3 { font-size: 10pt; color: #7C3AED; margin-bottom: 4px; }
+.info-box p, .info-box li { font-size: 8.5pt; line-height: 1.6; color: #555; }
+.info-box ul { padding-left: 16px; margin-top: 4px; }
 
-  .progress { margin-top: 20px; }
-  .progress-bar-bg { background: #E8ECF0; border-radius: 6px; height: 8px; overflow: hidden; }
-  .progress-bar { background: linear-gradient(90deg, #2563EB, #3B82F6); height: 100%; border-radius: 6px; transition: width 0.3s; }
-  .progress-text { font-size: 8pt; color: #94A3B8; margin-top: 4px; text-align: right; }
+.progress { margin-top: 20px; }
+.progress-bar-bg { background: #E8ECF0; border-radius: 6px; height: 8px; overflow: hidden; }
+.progress-bar { background: linear-gradient(90deg, #2563EB, #3B82F6); height: 100%; border-radius: 6px; transition: width 0.3s; }
+.progress-text { font-size: 8pt; color: #94A3B8; margin-top: 4px; text-align: right; }
 
-  .footer { text-align: center; padding: 16px; font-size: 7.5pt; color: #94A3B8; }
+.footer { text-align: center; padding: 16px; font-size: 7.5pt; color: #94A3B8; }
 </style>
+
 </head>
 <body>
 
@@ -53,60 +55,82 @@
 <div class="container">
 
   <!-- 진행률 -->
+
   <div class="progress">
-    <div class="progress-bar-bg"><div class="progress-bar" style="width: 10%"></div></div>
-    <div class="progress-text">완료 1 / 전체 약 10 파일 (예상)</div>
+    <div class="progress-bar-bg"><div class="progress-bar" style="width: 30%"></div></div>
+    <div class="progress-text">완료 3 / 전체 약 10 파일 (예상)</div>
   </div>
 
   <!-- 3강 -->
+
   <div class="section" style="margin-top: 20px">
     <div class="section-title">3강. 함축적 의미 파악 <span class="badge">Part 1</span></div>
 
-    <a class="card" href="ch3-1.html">
-      <div class="card-top">
-        <span class="card-title">수특 3강 [1]</span>
-        <span class="card-status done">완료</span>
-      </div>
-      <div class="card-desc">❶ Digital Platforms & Less Sticky Work (수능 21번) · ❷ Microclimate Control in Gardening</div>
-      <div class="card-tags">
-        <span class="card-tag">함축적 의미</span>
-        <span class="card-tag">선지 소거 연습</span>
-        <span class="card-tag">어법 9포인트</span>
-        <span class="card-tag">서술형 6문장</span>
-      </div>
-    </a>
+```
+<a class="card" href="ch3-1.html">
+  <div class="card-top">
+    <span class="card-title">수특 3강 [1]</span>
+    <span class="card-status done">완료</span>
+  </div>
+  <div class="card-desc">❶ Digital Platforms & Less Sticky Work (수능 21번) · ❷ Microclimate Control in Gardening</div>
+  <div class="card-tags">
+    <span class="card-tag">함축적 의미</span>
+    <span class="card-tag">선지 소거 연습</span>
+    <span class="card-tag">어법 9포인트</span>
+    <span class="card-tag">서술형 6문장</span>
+  </div>
+</a>
 
-    <a class="card" href="ch3-2.html" style="opacity: 0.5; pointer-events: none;">
-      <div class="card-top">
-        <span class="card-title">수특 3강 [2]</span>
-        <span class="card-status wait">대기</span>
-      </div>
-      <div class="card-desc">3지문 — 분석서 사진 보내면 생성</div>
-    </a>
+<a class="card" href="ch3-2.html">
+  <div class="card-top">
+    <span class="card-title">수특 3강 [2]</span>
+    <span class="card-status done">완료</span>
+  </div>
+  <div class="card-desc">❸ True Employee Loyalty Beyond Incentives · ❹ DNA as the History of Life · ❺ Fear of Critical Thinking</div>
+  <div class="card-tags">
+    <span class="card-tag">함축적 의미</span>
+    <span class="card-tag">선지 소거 연습</span>
+    <span class="card-tag">어법 10포인트</span>
+    <span class="card-tag">서술형 6문장</span>
+  </div>
+</a>
+```
+
   </div>
 
   <!-- 4강 -->
+
   <div class="section">
-    <div class="section-title">4강. <span style="color:#94A3B8">(다음 강 제목)</span></div>
+    <div class="section-title">4강. 요지 파악 <span class="badge">Part 1</span></div>
 
-    <a class="card" href="ch4-1.html" style="opacity: 0.5; pointer-events: none;">
-      <div class="card-top">
-        <span class="card-title">수특 4강 [1]</span>
-        <span class="card-status wait">대기</span>
-      </div>
-      <div class="card-desc">2지문 — 분석서 사진 보내면 생성</div>
-    </a>
+```
+<a class="card" href="ch4-1.html">
+  <div class="card-top">
+    <span class="card-title">수특 4강 [1]</span>
+    <span class="card-status done">완료</span>
+  </div>
+  <div class="card-desc">Gateway: Coopetition in the Sport Industry · ❶ Knowledge as a Source of Human Energy</div>
+  <div class="card-tags">
+    <span class="card-tag">요지 파악</span>
+    <span class="card-tag">선지 소거 연습</span>
+    <span class="card-tag">어법 8포인트</span>
+    <span class="card-tag">서술형 4문장</span>
+  </div>
+</a>
 
-    <a class="card" href="ch4-2.html" style="opacity: 0.5; pointer-events: none;">
-      <div class="card-top">
-        <span class="card-title">수특 4강 [2]</span>
-        <span class="card-status wait">대기</span>
-      </div>
-      <div class="card-desc">3지문 — 분석서 사진 보내면 생성</div>
-    </a>
+<a class="card" href="ch4-2.html" style="opacity: 0.5; pointer-events: none;">
+  <div class="card-top">
+    <span class="card-title">수특 4강 [2]</span>
+    <span class="card-status wait">대기</span>
+  </div>
+  <div class="card-desc">3지문 — 분석서 사진 보내면 생성</div>
+</a>
+```
+
   </div>
 
   <!-- 가이드 -->
+
   <div class="info-box">
     <h3>📌 이 페이지 활용법</h3>
     <ul>
