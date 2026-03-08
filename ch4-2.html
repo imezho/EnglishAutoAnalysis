@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수특 4강 [2] — 선정고 내신 대비</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm 12mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #2D3436; font-size: 9pt; line-height: 1.55; background: #fff; }
+  .title-bar { background: linear-gradient(135deg, #0C1821 0%, #1B3A4B 100%); color: #fff; padding: 16px 20px 12px; border-radius: 8px 8px 0 0; }
+  .title-bar h1 { font-size: 15pt; font-weight: 800; }
+  .title-sub { background: #162B37; color: #7F8C9B; padding: 5px 20px 7px; font-size: 8pt; border-radius: 0 0 8px 8px; margin-bottom: 10px; }
+  .pass-hdr { padding: 9px 16px; color: #fff; font-size: 11pt; font-weight: 700; margin-top: 14px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .pass-hdr .tag { font-size: 8.5pt; font-weight: 400; opacity: 0.85; }
+  .p1 { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+  .p2 { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+  .p3 { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
+  .core-box { padding: 9px 16px; font-size: 10pt; font-weight: 700; border-left: 4px solid; }
+  .core-box.b1 { background: #EFF6FF; border-color: #3B82F6; color: #1E3A5F; }
+  .core-box.b2 { background: #F0FDFA; border-color: #14B8A6; color: #134E4A; }
+  .core-box.b3 { background: #F5F3FF; border-color: #8B5CF6; color: #3B1F6E; }
+  .row { display: flex; border-bottom: 1px solid #E8ECF0; }
+  .row-label { width: 74px; min-width: 74px; background: #F1F5F9; padding: 7px 6px; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.35; }
+  .row-label.c1 { color: #2563EB; } .row-label.c2 { color: #0D9488; } .row-label.c3 { color: #7C3AED; } .row-label.cw { color: #D97706; }
+  .row-body { flex: 1; display: flex; } .row-col { flex: 1; padding: 7px 10px; font-size: 8.5pt; line-height: 1.55; border-left: 1px solid #E8ECF0; }
+  .red { color: #DC2626; font-weight: 600; } .green { color: #059669; font-weight: 600; } .gray { color: #9CA3AF; } .purple { color: #7C3AED; } b { font-weight: 700; }
+  .sogo { background: #FFFBEB; border-left: 4px solid #F59E0B; } .sogo .row-label { background: #FEF3C7; }
+  .wrong { background: #FEF2F2; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; line-height: 1.45; }
+  .wrong-tag { color: #DC2626; font-size: 7.5pt; font-weight: 700; }
+  .right { background: #ECFDF5; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; border-left: 3px solid #059669; line-height: 1.45; }
+  .guide { background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 9px 14px; margin-top: 6px; border-radius: 0 4px 4px 0; }
+  .guide h3 { color: #7C3AED; font-size: 9pt; margin-bottom: 4px; } .guide li { font-size: 8pt; line-height: 1.55; margin-bottom: 2px; } .guide ul { padding-left: 16px; }
+  .tag-g, .tag-v { display: inline-block; white-space: nowrap; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 700; }
+  .tag-g { background: #ECFDF5; color: #059669; } .tag-v { background: #FEF2F2; color: #DC2626; }
+  .gv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .gv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .gv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .gv-table tr:nth-child(even) { background: #F8FAFC; } .gv-table td:nth-child(5) { text-align: center; white-space: nowrap; }
+  .stars { font-weight: 700; white-space: nowrap; } .s5 { color: #DC2626; } .s4 { color: #D97706; }
+  .sv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .sv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .sv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .sv-table tr:nth-child(even) { background: #F8FAFC; }
+  .warn-cell { background: #FEF2F2; color: #DC2626; font-weight: 600; font-size: 7.5pt; line-height: 1.45; }
+  .page-break { page-break-before: always; } .mt { margin-top: 12px; } .sogo-title { font-size: 8.5pt; font-weight: 700; margin-bottom: 4px; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: #F1F5F9; border-radius: 6px; margin-bottom: 10px; font-size: 8.5pt; }
+  .nav a { color: #2563EB; text-decoration: none; font-weight: 600; } .nav a:hover { text-decoration: underline; }
+  .nav .current { color: #64748B; } .nav-bottom { margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="ch4-1.html">← 수특 4강 [1]</a>
+  <span class="current">수특 4강 [2]</span>
+  <a href="ch5-1.html">수특 5강 [1] →</a>
+</div>
+
+<div class="title-bar"><h1>수특 4강 [2] — 요지 파악</h1></div>
+<div class="title-sub">2027 수능특강 영어 · 내신 변형 대비 · 선지 소거 연습 · 100점 목표</div>
+
+<!-- ❷ Citizen Journalism -->
+<div class="pass-hdr p1">❷ Citizen Journalism in the Digital Age <span class="tag">[Part 1] 04 요지 #2</span></div>
+<div class="core-box b1">💡 전통 뉴스 기관이 지역 사회를 떠나 "뉴스 사막"을 남긴 상황에서, 디지털 기술은 시민들에게 정보의 방송자·게이트키퍼 역할을 할 수 있는 도구를 제공한다.</div>
+
+<div class="row">
+  <div class="row-label c1">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>문제 상황</b><br>→ 전문 언론인의 지역 참여만으로는 부족<br>→ 전통 뉴스 기관이 지역 사회를 <b>abandoned</b><br>→ <b>news deserts</b> = 뉴스 사막이 남음<br>→ 저널리즘이 전문가/부유층 소유였음</div>
+    <div class="row-col"><b>해결 방향</b><br>→ 시민이 정보 수집·권력 감시·뉴스 전달의 <b>책임</b>을 맡아야<br>→ 컴퓨터+인터넷 = <b>disruption</b>(파괴적 혁신)<br>→ 시민이 정보의 <b>broadcasters, publishers, gatekeepers</b>로<br>→ belongs to the people <b>rather than</b> to professionals</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">핵심 표현</div>
+  <div class="row-body">
+    <div class="row-col"><b>"leaving behind news deserts"</b><br>= 뉴스 사막을 남기고 떠남<br><span class="red">★ news deserts = 뉴스 기관이 빠져나간 지역의 정보 공백</span><br><br><b>"belongs to the people rather than to"</b><br>→ 전문가가 아니라 <b>시민에게</b> 속한다</div>
+    <div class="row-col"><b>"to serve as gatekeepers to information"</b><br>= 정보의 문지기 역할<br><br><b>논증 흐름:</b><br>① 전문 언론인만으론 부족 → ② 전통 기관 떠남(news deserts)<br>③ 시민이 책임 맡아야 → ④ 기술이 도구 제공<br>⑤ <b>결론: 시민이 방송자·게이트키퍼 역할</b></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 디지털 기술 덕분에 시민들이 지역 뉴스의 생산자·전달자 역할을 할 수 있게 되었다<br><span class="green" style="font-size:7.5pt">대상(시민+기술) + 관점(뉴스 생산/전달 역할) 일치</span></div>
+      <div class="wrong">× 전통 언론의 쇠퇴를 막기 위한 정부 지원이 필요하다 <span class="wrong-tag">— 근거 부재</span></div>
+      <div class="wrong">× 시민 저널리즘은 뉴스의 질을 떨어뜨린다 <span class="wrong-tag">— 방향 반대</span></div>
+      <div class="wrong">× 인터넷이 전통 미디어를 완전히 대체했다 <span class="wrong-tag">— 강도 과장</span><br><span style="font-size:7pt; color:#6B7280">"완전히 대체"가 아니라 "시민에게 도구를 제공"</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ From News Deserts to Citizen Voices: The Digital Shift</div>
+      <div class="wrong">× The Death of Traditional Journalism <span class="wrong-tag">— 방향(부정적 평가 아님)</span></div>
+      <div class="wrong">× How Social Media Spreads Fake News <span class="wrong-tag">— 근거 부재</span></div>
+      <div class="wrong">× Professional Journalism vs Citizen Reporting <span class="wrong-tag">— 부분(대비가 주제 아님)</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> news deserts 정의, belongs to people, gatekeepers<br><b>[요약]</b> traditional media(떠남) → citizens(책임+도구)<br><b>[순서]</b> 문제→기술의 등장→시민의 새 역할</div>
+    <div class="row-col"><b>[어법]</b> that never have existed before (현완+부정) / making(분사)<br>rather than to (병렬 전치사) / take up(구동사)<br><b>[어휘]</b> accountable / relevant / abandon / disruption</div>
+  </div>
+</div>
+
+<div style="margin-top:14px"></div>
+
+<!-- ❸ Evidence-Based Thinking -->
+<div class="pass-hdr p2">❸ The Importance of Evidence-Based Thinking <span class="tag">[Part 1] 04 요지 #3</span></div>
+<div class="core-box b2">💡 모든 생각이 똑같이 타당하다는 것은 신화이며, 비판적 사고는 절대적 필수이고, 감(직관)이 유용하더라도 증거 없이는 최종 판단이 될 수 없다.</div>
+
+<div class="row">
+  <div class="row-label c2">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>신화 (부정되는 것)</b><br>→ "all ideas are equally valid" = 모든 생각이 똑같이 타당<br>→ 심지어 <b>증거 거의/전혀 없이도</b> (little or no objective proof)<br>→ 직관(intuition)은 유용하지만<br>→ <b>never the ultimate word</b> = 최종 판단은 아님</div>
+    <div class="row-col"><b>핵심 주장</b><br>→ 과학의 존재 = <b>객관적 사실에 대한 헌신</b>(commitment)<br>→ 이론이 반증되면 → 거부하거나 수정해야<br>→ 본능적으로 집착(wedded to)하면 안 됨<br>→ <b>"Critical thinking is an absolute must"</b><br>→ <b>증거를 존중해야(respect evidence)</b></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">핵심 표현</div>
+  <div class="row-body">
+    <div class="row-col"><b>"It is a myth that all ideas are equally valid"</b><br>→ 강조구문: It is ~ that<br><span class="red">★ myth = 신화(=거짓된 믿음). "사실"이 아니라 "허구"</span><br><br><b>"be wedded to the hypothesis"</b><br>= 가설에 집착하다 (결혼하듯 매달린다의 비유)</div>
+    <div class="row-col"><b>"an intuition must be followed with testing"</b><br>= 직관은 반드시 검증이 뒤따라야<br><br><b>"it is never the ultimate word"</b><br>= 최종 판단은 절대 아님<br><span class="red">★ never = 강도 주의. "거의 아님"이 아니라 "절대 아님"</span></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 비판적 사고는 절대적으로 필요하며, 증거를 존중해야 한다<br><span class="green" style="font-size:7.5pt">"absolute must" + "respect evidence" 직접 반영</span></div>
+      <div class="wrong">× 모든 의견은 동등하게 존중받아야 한다 <span class="wrong-tag">— 방향 정반대</span><br><span style="font-size:7pt; color:#6B7280">글은 이것이 "myth"라고 부정함</span></div>
+      <div class="wrong">× 과학적 방법만이 진실에 도달하는 유일한 방법이다 <span class="wrong-tag">— 강도 과장</span><br><span style="font-size:7pt; color:#6B7280">직관도 "useful"하다고 인정함. 유일하지 않음</span></div>
+      <div class="wrong">× 직관은 의사결정에서 배제해야 한다 <span class="wrong-tag">— 강도 과장</span><br><span style="font-size:7pt; color:#6B7280">"useful"하지만 "ultimate word"는 아님 ≠ 배제</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Evidence Over Intuition: Why Critical Thinking Is Non-Negotiable</div>
+      <div class="wrong">× All Ideas Matter: Embracing Diversity of Thought <span class="wrong-tag">— 방향 반대</span></div>
+      <div class="wrong">× The Limits of Scientific Method <span class="wrong-tag">— 관점 이탈</span></div>
+      <div class="wrong">× Trust Your Gut: The Power of Intuition <span class="wrong-tag">— 방향 반대</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> "myth"라고 부정한 내용을 긍정하는 선지는 즉시 소거. never/absolute 같은 강도 표현 체크.</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> myth=모든 생각이 동등, intuition=useful but not ultimate<br>이론 반증 시 → reject or alter<br><b>[요약]</b> myth(동등) vs truth(증거 기반) 대비</div>
+    <div class="row-col"><b>[어법]</b> It is a myth that~ (강조구문) / must be followed <b>with</b><br>keep us from getting sick (keep+O+from V-ing)<br><b>[어휘]</b> valid / commitment / veracity / wedded to / plausible</div>
+  </div>
+</div>
+
+<div style="margin-top:14px"></div>
+
+<!-- ❹ Social Anxiety → Compassion -->
+<div class="pass-hdr p3">❹ Turning Social Anxiety into Compassion <span class="tag">[Part 1] 04 요지 #4</span></div>
+<div class="core-box b3">💡 사회적 불안은 제거할 대상이 아니라, "사회적 근육"을 키우고 연민(compassion)으로 전환할 수 있는 내재적 자원이다.</div>
+
+<div class="row">
+  <div class="row-label c3">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>표면 (불안의 부정적 면)</b><br>→ social angst, awkwardness, dread<br>→ 내면의 불안을 처리하려 함<br>→ uncertain, insecure한 느낌</div>
+    <div class="row-col"><b>반전 (불안의 긍정적 전환)</b><br>→ perfectly <b>normal response</b> = 지극히 정상<br>→ 사회적 근육(social muscle)을 키울 수 있음<br>→ 불안 = icebreakers + lifelines을 제공하는 <b>단서</b><br>→ <b>flipping anxiety into compassion</b><br>→ <b>결론: compassion의 확산 → 동료, 종, 지구</b></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c3">핵심 표현</div>
+  <div class="row-body">
+    <div class="row-col"><b>"build your social muscle"</b><br>= 사회적 근육을 키우다<br><span class="red">★ 불안을 없애는 게 아니라, 불안을 통해 관계를 강화하는 비유</span><br><br><b>"flipping anxiety into compassion"</b><br>= 불안을 연민으로 뒤집다<br><span class="gray">flip = 뒤집다. 부정→긍정 전환의 핵심 동사</span></div>
+    <div class="row-col"><b>"your anxiety is designed to do for you"</b><br>= 불안은 당신을 위해 설계된 것<br><span class="red">★ designed = 불안이 목적이 있다는 관점</span><br><br><b>"buffer against bad anxiety"</b><br>= 나쁜 불안에 대한 완충제<br>→ compassion + empathy = buffer<br><br><b>결론: "The spread of compassion for your fellow human beings, other species, and the planet!"</b></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 사회적 불안은 연민으로 전환할 수 있는 내재적 자원이다<br><span class="green" style="font-size:7.5pt">대상(불안) + 관점(자원/연민 전환) 일치</span></div>
+      <div class="wrong">× 사회적 불안을 극복하기 위해 전문적 치료가 필요하다 <span class="wrong-tag">— 관점 이탈</span></div>
+      <div class="wrong">× 불안은 자연스러운 감정이므로 무시해도 된다 <span class="wrong-tag">— 강도(무시 ≠ 전환)</span></div>
+      <div class="wrong">× 사회적 관계를 회피하면 불안이 줄어든다 <span class="wrong-tag">— 방향 반대</span><br><span style="font-size:7pt; color:#6B7280">글은 "outward-facing" = 외부를 향하라고 말함</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Flip the Script: From Social Anxiety to Compassion</div>
+      <div class="wrong">× How to Eliminate Social Anxiety Forever <span class="wrong-tag">— 방향(제거 아님, 전환)</span></div>
+      <div class="wrong">× The Science of Social Phobia <span class="wrong-tag">— 관점 이탈</span></div>
+      <div class="wrong">× Why We Should Avoid Social Situations <span class="wrong-tag">— 방향 정반대</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c3">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> normal response, social muscle, icebreakers,<br>anxiety is inherent, designed to do for you<br><b>[요약]</b> anxiety(부정적) → compassion(긍정적 전환)</div>
+    <div class="row-col"><b>[어법]</b> are dealing with (진행형) / No matter what (양보)<br>use it to boost (to부정사 목적) / offering a hand (분사)<br><b>[어휘]</b> inherent / buffer / extend / outward-facing / dread</div>
+  </div>
+</div>
+
+<div class="guide">
+  <h3>📝 변형문제 풀 때 체크</h3>
+  <ul>
+    <li><b>Citizen Journalism:</b> "전통 언론 비판"이 아니라 "시민의 새 역할"이 핵심. news deserts는 배경 설명.</li>
+    <li><b>Evidence-Based:</b> "myth"라고 부정한 내용(=모든 생각 동등)을 긍정하는 선지는 즉시 소거.</li>
+    <li><b>Social Anxiety:</b> "제거/극복"이 아니라 "전환(flip)"이 핵심. eliminate/overcome 선지 주의.</li>
+    <li><b>never/absolute/must:</b> 세 지문 모두 강도가 강한 표현이 핵심에 있으니, 선지에서 강도 완화/과장 체크.</li>
+  </ul>
+</div>
+
+<!-- PAGE 2: 어법·어휘 -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 4강 [2] — 어법·어휘</h1></div>
+<div class="title-sub">★★★★★ 거의 확실 · ★★★★☆ 높음 · <span style="color:#059669">■ 어법</span> · <span style="color:#DC2626">■ 어휘</span></div>
+
+<table class="gv-table">
+<thead><tr><th style="width:55px">지문</th><th style="width:44px">구분</th><th>원문 표현</th><th>변형 시 헷갈리는 이유</th><th style="width:52px">위험도</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><b>Citizen<br>Journalism</b></td><td><span class="tag-g">어법</span></td><td>in ways <b>that</b> never have existed before</td><td>that = 관계대명사(주격). which로 대체 가능하지만 what은 불가.<br><span class="red">that 뒤에 주어 없음 → 주격 관계대명사 확인</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td>belongs to the people <b>rather than</b> to professionals</td><td>rather than 뒤에 to가 반복되는 병렬 구조.<br><span class="red">to 생략 시 병렬 파괴. "rather than professionals"도 가능하지만 정확한 병렬은 to 반복</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>abandon</b> = 버리다, 포기하다</td><td>"have abandoned many communities" = 많은 지역사회를 버렸다.<br><span class="red">내용일치에서 "지원했다"로 뒤집기 가능</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td rowspan="4"><b>Evidence-<br>Based</b></td><td><span class="tag-g">어법</span></td><td>It is a myth <b>that</b> all ideas are equally valid</td><td>강조구문 It is ~ that. that → which/what 치환 시 구조 붕괴.<br><span class="red">It is + 명사 + that절 = 동격의 that (강조구문 or 동격절)</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td>keep us from <b>getting</b> sick</td><td>keep + O + from + V-ing 구조. getting → to get 치환 = 오류.<br><span class="red">from 뒤는 반드시 동명사</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>veracity</b> = 진실성, 정확성</td><td>"confirms or disproves its veracity" = 진실성을 확인하거나 반증.<br><span class="red">voracity(탐욕)와 철자 혼동 주의</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>wedded to</b> = ~에 집착하는</td><td>"instinctively wedded to the hypothesis" = 본능적으로 집착.<br><span class="red">wedding(결혼)의 비유. 어휘 적절성에서 "attached to" 치환 가능</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td rowspan="3"><b>Social<br>Anxiety</b></td><td><span class="tag-g">어법</span></td><td>No matter <b>what</b> it looks like</td><td>No matter what = whatever. No matter how와 혼동 주의.<br><span class="red">what 뒤에 불완전한 절 → what(관계대명사) 확인</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>inherent</b> = 내재적인, 고유의</td><td>"something inherent in you" = 당신 안에 내재된 것.<br><span class="red">inherit(상속하다)와 혼동 주의. inherent ≠ inherited</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>buffer</b> = 완충하다, 완충제</td><td>"can buffer against bad anxiety" = 나쁜 불안을 완충.<br><span class="red">동사로 쓰임. "buffer against" = ~에 대해 완충 역할을 하다</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+</tbody>
+</table>
+
+<!-- PAGE 3: 서술형 -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 4강 [2] — 서술형 대비</h1></div>
+<div class="title-sub">변형 출제 시 감점 포인트 중심</div>
+
+<table class="sv-table" style="margin-top:8px">
+<thead><tr><th style="width:55px">지문</th><th>핵심 문장 (변형 소재)</th><th style="width:105px">변형 방식 예시</th><th style="width:100px">⚠ 감점 포인트</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><b>Citizen<br>Journalism</b></td><td>Journalism belongs to the people <b>rather than</b> to professional journalists.</td><td>• rather than 빈칸<br>• 비교 구조 배열<br>• belongs 주어 확인</td><td class="warn-cell">• rather than 전치사 병렬<br>• belongs (3인칭 단수)<br>• journalists 철자</td></tr>
+<tr><td>The same technology gives them the tools <b>to act as</b> broadcasters and publishers of information.</td><td>• to act as 빈칸<br>• 목적어 배열<br>• 핵심문장 영작</td><td class="warn-cell">• to act as (to부정사)<br>• broadcasters 철자<br>• publishers 철자</td></tr>
+<tr><td rowspan="2"><b>Evidence-<br>Based</b></td><td><b>Critical thinking is an absolute must</b>, and we must respect evidence.</td><td>• 핵심문장 영작<br>• absolute 빈칸<br>• must(명사) 용법</td><td class="warn-cell">• absolute 철자<br>• must = 명사(필수요건)<br>• evidence 철자</td></tr>
+<tr><td>An intuition must be <b>followed with</b> testing that confirms or disproves its <b>veracity</b>.</td><td>• followed with 전치사<br>• veracity 빈칸<br>• 수동태 구조</td><td class="warn-cell">• followed with (전치사!)<br>• veracity 철자!<br>• confirms or disproves 병렬</td></tr>
+<tr><td rowspan="2"><b>Social<br>Anxiety</b></td><td><b>Flipping</b> anxiety into compassion is something <b>inherent</b> in you.</td><td>• flipping 동명사<br>• inherent 빈칸<br>• 주어(동명사구) 확인</td><td class="warn-cell">• flipping (동명사 주어)<br>• inherent 철자<br>• compassion 철자</td></tr>
+<tr><td>Together, compassion and empathy can <b>buffer against</b> bad anxiety.</td><td>• buffer against 숙어<br>• 주어(compassion+empathy)<br>• 조동사 can 위치</td><td class="warn-cell">• buffer 철자<br>• against 전치사<br>• empathy 철자</td></tr>
+</tbody>
+</table>
+
+<div class="guide mt">
+  <h3>🎯 선정고 패턴 — 서술형 변형 예상</h3>
+  <ul>
+    <li><b>어법 교정:</b> "keep us from to get sick" → to get → getting / "It is a myth which all ideas" → which → that</li>
+    <li><b>배열:</b> "belongs / to the people / rather than / to professional journalists" → rather than 위치가 핵심</li>
+    <li><b>빈칸/숙어:</b> followed <b>with</b> / buffer <b>against</b> / wedded <b>to</b> → 전치사가 빈칸 소재</li>
+    <li><b>요지 서술형:</b> "비판적 사고는 절대적 필수이며 증거를 존중해야 한다" / "사회적 불안은 연민으로 전환할 수 있는 내재적 자원이다"</li>
+  </ul>
+</div>
+
+<div class="nav nav-bottom">
+  <a href="ch4-1.html">← 수특 4강 [1]</a>
+  <span class="current">수특 4강 [2]</span>
+  <a href="ch5-1.html">수특 5강 [1] →</a>
+</div>
+
+</body>
+</html>
