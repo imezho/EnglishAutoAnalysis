@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수특 3강 [2] — 선정고 내신 대비</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm 12mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #2D3436; font-size: 9pt; line-height: 1.55; background: #fff; }
+  .title-bar { background: linear-gradient(135deg, #0C1821 0%, #1B3A4B 100%); color: #fff; padding: 16px 20px 12px; border-radius: 8px 8px 0 0; }
+  .title-bar h1 { font-size: 15pt; font-weight: 800; letter-spacing: -0.3px; }
+  .title-sub { background: #162B37; color: #7F8C9B; padding: 5px 20px 7px; font-size: 8pt; border-radius: 0 0 8px 8px; margin-bottom: 10px; }
+  .pass-hdr { padding: 9px 16px; color: #fff; font-size: 11pt; font-weight: 700; margin-top: 14px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .pass-hdr .tag { font-size: 8.5pt; font-weight: 400; opacity: 0.85; }
+  .p1 { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+  .p2 { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+  .p3 { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
+  .core-box { padding: 9px 16px; font-size: 10pt; font-weight: 700; border-left: 4px solid; }
+  .core-box.b1 { background: #EFF6FF; border-color: #3B82F6; color: #1E3A5F; }
+  .core-box.b2 { background: #F0FDFA; border-color: #14B8A6; color: #134E4A; }
+  .core-box.b3 { background: #F5F3FF; border-color: #8B5CF6; color: #3B1F6E; }
+  .row { display: flex; border-bottom: 1px solid #E8ECF0; }
+  .row-label { width: 74px; min-width: 74px; background: #F1F5F9; padding: 7px 6px; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.35; }
+  .row-label.c1 { color: #2563EB; } .row-label.c2 { color: #0D9488; } .row-label.c3 { color: #7C3AED; } .row-label.cw { color: #D97706; }
+  .row-body { flex: 1; display: flex; }
+  .row-col { flex: 1; padding: 7px 10px; font-size: 8.5pt; line-height: 1.55; border-left: 1px solid #E8ECF0; }
+  .red { color: #DC2626; font-weight: 600; } .green { color: #059669; font-weight: 600; } .gray { color: #9CA3AF; } .purple { color: #7C3AED; }
+  b { font-weight: 700; }
+  .sogo { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+  .sogo .row-label { background: #FEF3C7; }
+  .wrong { background: #FEF2F2; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; line-height: 1.45; }
+  .wrong-tag { color: #DC2626; font-size: 7.5pt; font-weight: 700; }
+  .right { background: #ECFDF5; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; border-left: 3px solid #059669; line-height: 1.45; }
+  .guide { background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 9px 14px; margin-top: 6px; border-radius: 0 4px 4px 0; }
+  .guide h3 { color: #7C3AED; font-size: 9pt; margin-bottom: 4px; }
+  .guide li { font-size: 8pt; line-height: 1.55; margin-bottom: 2px; } .guide ul { padding-left: 16px; }
+  .tag-g, .tag-v { display: inline-block; white-space: nowrap; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 700; }
+  .tag-g { background: #ECFDF5; color: #059669; } .tag-v { background: #FEF2F2; color: #DC2626; }
+  .gv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .gv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .gv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .gv-table tr:nth-child(even) { background: #F8FAFC; }
+  .gv-table td:nth-child(5) { text-align: center; white-space: nowrap; }
+  .stars { font-weight: 700; white-space: nowrap; } .s5 { color: #DC2626; } .s4 { color: #D97706; } .s3 { color: #9CA3AF; }
+  .sv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .sv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .sv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .sv-table tr:nth-child(even) { background: #F8FAFC; }
+  .warn-cell { background: #FEF2F2; color: #DC2626; font-weight: 600; font-size: 7.5pt; line-height: 1.45; }
+  .page-break { page-break-before: always; }
+  .mt { margin-top: 12px; }
+  .sogo-title { font-size: 8.5pt; font-weight: 700; margin-bottom: 4px; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: #F1F5F9; border-radius: 6px; margin-bottom: 10px; font-size: 8.5pt; }
+  .nav a { color: #2563EB; text-decoration: none; font-weight: 600; } .nav a:hover { text-decoration: underline; }
+  .nav .current { color: #64748B; font-weight: 400; }
+  .nav-bottom { margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="ch3-1.html">← 수특 3강 [1]</a>
+  <span class="current">수특 3강 [2]</span>
+  <a href="ch4-1.html">수특 4강 [1] →</a>
+</div>
+
+<!-- ===== PAGE 1 ===== -->
+<div class="title-bar"><h1>수특 3강 [2] — 함축적 의미 파악</h1></div>
+<div class="title-sub">2027 수능특강 영어 · 내신 변형 대비 · 선지 소거 연습 · 100점 목표</div>
+
+<!-- PASSAGE 3: True Employee Loyalty -->
+<div class="pass-hdr p1">❸ True Employee Loyalty Beyond Incentives <span class="tag">[Part 1] 03 함축적 의미 #2</span></div>
+<div class="core-box b1">💡 보너스·승진 같은 외적 보상은 단기적 조작에 불과하며, 진정한 직원 충성심은 "대성당을 짓고 싶어서" 출근하는 마음에서 나온다.</div>
+
+<div class="row">
+  <div class="row-label c1">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>외적 보상 (Short-term)</b><br>→ 보너스, 승진, 당근과 채찍(carrots & sticks)<br>→ 더 열심히 일하게 만들지만 = manipulation<br>→ 효과는 <b>short-term</b><br>→ 시간이 지나면 비용↑ + 스트레스↑</div>
+    <div class="row-col"><b>진정한 충성심 (True Loyalty)</b><br>→ 더 많은 돈/혜택을 거절(turn down)할 때<br>→ 일 자체가 아니라 <b>cause</b>(대의)를 위해 출근<br>→ "벽 쌓기" ✗ → "대성당 짓기" ✓<br>→ we <b>want</b> to come to work</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">밑줄 표현<br>+ 함축</div>
+  <div class="row-body">
+    <div class="row-col"><b>"to build a wall" vs "to build a cathedral"</b><br>= 벽을 쌓기 위해 vs 대성당을 짓기 위해<br><br><span class="red">★ wall = 단순 노동/의무 (돈을 위한 출근)</span><br><span class="red">★ cathedral = 대의/가치 (의미를 위한 출근)</span><br><span class="gray">중세 석공 비유: 같은 일이라도 목적 인식이 다르면 태도가 다름</span></div>
+    <div class="row-col"><b>"Loyalty trumps pay and benefits"</b><br>= 충성심은 급여와 혜택을 능가한다<br><br><b>"That's the employee version of repeat business"</b><br>= 그것은 고객의 재방문과 같은 직원 버전이다<br><span class="gray">→ repeat business(단골) = 충성 고객의 비유</span></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [주장]으로 나온다면?</div>
+      <div class="right">✓ 직원들에게 보상이 아닌 일의 의미와 대의를 심어주어야 한다<br><span class="green" style="font-size:7.5pt">방향(처방) + 대상(직원) + 핵심(대의/의미) 일치</span></div>
+      <div class="wrong">× 직원에게 적절한 보상을 제공하면 충성심이 높아진다 <span class="wrong-tag">— 방향 반대</span><br><span style="font-size:7pt; color:#6B7280">글은 보상이 manipulation이라고 비판함</span></div>
+      <div class="wrong">× 직원 스트레스를 줄이기 위해 업무량을 조절해야 한다 <span class="wrong-tag">— 관점 이탈</span></div>
+      <div class="wrong">× 고용주와 직원 간의 신뢰가 기업 성과를 좌우한다 <span class="wrong-tag">— 범위 과대</span><br><span style="font-size:7pt; color:#6B7280">"신뢰"는 언급되지 않음. 핵심은 "대의(cause)"</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Building Cathedrals, Not Walls: The Heart of True Loyalty<br><span class="green" style="font-size:7.5pt">핵심 비유(cathedral vs wall) + 관점(진정한 충성심)</span></div>
+      <div class="wrong">× How Bonuses Drive Employee Performance <span class="wrong-tag">— 방향 반대</span></div>
+      <div class="wrong">× The Cost of Employee Turnover <span class="wrong-tag">— 근거 부재</span></div>
+      <div class="wrong">× Why Employees Need Both Carrots and Sticks <span class="wrong-tag">— 방향 반대</span><br><span style="font-size:7pt; color:#6B7280">글은 carrots & sticks를 비판함</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> "보상 → 충성"은 글이 부정하는 인과. 이 인과를 긍정하는 선지는 즉시 소거.</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[요지]</b> 진정한 충성심은 보상이 아니라 대의(cause)에서 나옴<br><b>[내용일치]</b> manipulation=단기적, loyalty=거절할 때, cause≠work<br><b>[요약]</b> short-term(보상) → long-term(대의) 대비 구조</div>
+    <div class="row-col"><b>[어법]</b> that inspires us (관계대명사) / unless (조건절)<br><b>[어휘]</b> trumps(능가하다) / turn down(거절) / inject(주입)<br><b>[순서]</b> 보상 소개 → But 한계 → 결론(cathedral)</div>
+  </div>
+</div>
+
+<div style="margin-top:14px"></div>
+
+<!-- PASSAGE 4: DNA as History -->
+<div class="pass-hdr p2">❹ DNA as the History of Life <span class="tag">[Part 1] 03 함축적 의미 #3</span></div>
+<div class="core-box b2">💡 DNA는 우리가 가진 역사이자, 우리를 지배하는 역사다. 우리는 DNA라는 역사의 수레에 갇혀 있고, 역사도 우리 안에 갇혀 있다.</div>
+
+<div class="row">
+  <div class="row-label c2">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>Baldwin의 원래 맥락</b><br>→ "People are trapped in history and history is trapped in them"<br>→ 원래는 인종 문제에 관한 언급<br>→ "people"이라는 단어를 사용</div>
+    <div class="row-col"><b>DNA로의 확장</b><br>→ "people" → "all of life on Earth" / "each strand of DNA"로 치환<br>→ DNA = nothing but history, blueprint, dictator, vehicle<br>→ 축복(blessings)이자 시한폭탄(deadly time bombs)</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">밑줄 표현<br>+ 함축</div>
+  <div class="row-body">
+    <div class="row-col"><b>"We are indeed trapped in this particular vehicle of history, as much as it is trapped in us"</b><br><br><span class="red">★ vehicle of history = DNA를 비유적으로 표현</span><br><span class="red">★ trapped in = 갇혀 있다 (상호적)</span><br><span class="gray">우리가 DNA에 갇혀 있고, DNA도 우리 안에 갇혀 있다 = 상호 종속</span></div>
+    <div class="row-col"><b>핵심 비유 연쇄:</b><br>• DNA = ancient record of biological history<br>• written in simple code<br>• passed down from generation to generation<br>• nothing but history<br>• blueprint (설계도) + dictator (지배자)<br>• vehicle of history (역사의 수레)<br><span class="red">→ 모두 DNA = 역사라는 하나의 은유를 변주</span></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [주제]로 나온다면?</div>
+      <div class="right">✓ DNA가 생명체의 역사를 담고 있으며 우리를 지배하는 방식<br><span class="green" style="font-size:7.5pt">대상(DNA) + 관점(역사로서의 지배/상호 종속)</span></div>
+      <div class="wrong">× DNA 연구가 인종 문제 해결에 기여하는 방법 <span class="wrong-tag">— 범위 과대+관점 이탈</span><br><span style="font-size:7pt; color:#6B7280">Baldwin 인용은 도입부일 뿐, 인종 문제 해결이 주제 아님</span></div>
+      <div class="wrong">× 유전 정보의 과학적 분석 방법과 한계 <span class="wrong-tag">— 근거 부재</span></div>
+      <div class="wrong">× 자연선택이 생물 다양성에 미치는 영향 <span class="wrong-tag">— 관점 이탈</span><br><span style="font-size:7pt; color:#6B7280">natural selection은 예시로만 언급</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Trapped in Our Own History: DNA as Life's Record<br><span class="green" style="font-size:7.5pt">핵심 은유(trapped) + 관점(역사 기록)</span></div>
+      <div class="wrong">× The Science Behind DNA Sequencing <span class="wrong-tag">— 관점 이탈</span></div>
+      <div class="wrong">× James Baldwin's Legacy in Modern Biology <span class="wrong-tag">— 범위 축소</span></div>
+      <div class="wrong">× How Natural Selection Shapes Our Genes <span class="wrong-tag">— 부분 언급</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> Baldwin 인용은 "도입 장치"일 뿐. Baldwin이 주제인 선지는 즉시 소거.</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> Baldwin=1960년대/인종 문제, DNA=simple code,<br>passed down, blessings or time bombs<br><b>[요약]</b> DNA = history (기록) + master (지배자) 대비</div>
+    <div class="row-col"><b>[어법]</b> that was slowly blended (수동) / passed down (과거분사)<br>written in simple code (과거분사) / one = history<br><b>[어휘]</b> pitiless(무자비한) / strand(가닥) / vehicle(수단)</div>
+  </div>
+</div>
+
+<div style="margin-top:14px"></div>
+
+<!-- PASSAGE 5: Fear of Critical Thinking -->
+<div class="pass-hdr p3">❺ Fear of Critical Thinking <span class="tag">[Part 1] 03 함축적 의미 #4</span></div>
+<div class="core-box b3">💡 사람들이 비판적으로 사고하지 않는 이유는 어렵기 때문만이 아니라, 오래된 신념이 흔들릴까 봐 두렵기 때문이다.</div>
+
+<div class="row">
+  <div class="row-label c3">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>표면적 이유</b><br>→ 비판적 사고는 어렵다 (hard)<br>→ 게으름, 무능력 (laziness and inability)<br>→ 하지만 이것만이 이유는 아님 (<b>not just</b>)</div>
+    <div class="row-col"><b>진짜 이유 (핵심)</b><br>→ 오래된 신념이 도전받을까 <b>두렵다</b> (afraid)<br>→ long-held assumptions are <b>challenged</b><br>→ 균형을 잃고 세상을 다른 방식으로 봐야 할까 봐<br>→ <b>shakes us to the core</b> = 송두리째 흔든다</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c3">밑줄 표현<br>+ 함축</div>
+  <div class="row-body">
+    <div class="row-col"><b>"it shakes us to the core"</b><br>= (직역) 우리를 핵심까지 흔든다<br>→ (함축) <b>우리의 근본적인 신념 체계를 송두리째 흔든다</b><br><br><span class="red">★ "it" = thinking (사고하는 것 자체)</span><br><span class="red">★ "the core" = 우리의 근본 신념/정체성</span></div>
+    <div class="row-col"><b>논증 구조 (서술형/순서 소재):</b><br>① 사람들은 다양한 이유로 비판적 사고를 않음<br>② not just 어렵기 때문 + but also 두렵기 때문<br>③ 깊이 사고하면 → 오래된 가정이 challenged<br>④ 균형 상실 우려 → 세상을 다르게 봐야 함<br>⑤ 사고는 우리, 타인, 세상에 중요<br>⑥ 그래서 두려운 것 = shakes us to the core</div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 비판적 사고를 꺼리는 진짜 이유는 기존 신념이 흔들릴 두려움이다<br><span class="green" style="font-size:7.5pt">"not just hard + but also afraid" 구조 정확히 반영</span></div>
+      <div class="wrong">× 비판적 사고력을 기르기 위해 교육 과정을 개선해야 한다 <span class="wrong-tag">— 관점 이탈</span><br><span style="font-size:7pt; color:#6B7280">글은 "왜 꺼리는지" 분석이지 "어떻게 기를지" 처방이 아님</span></div>
+      <div class="wrong">× 비판적 사고는 논쟁적 주제에서만 필요하다 <span class="wrong-tag">— 강도 축소</span><br><span style="font-size:7pt; color:#6B7280">글은 "us, others, the world" 전체에 중요하다고 말함</span></div>
+      <div class="wrong">× 사람들은 사고하는 것 자체가 어려워 비판적 사고를 못 한다 <span class="wrong-tag">— 전환어 무시</span><br><span style="font-size:7pt; color:#6B7280">"not just because it's hard" = 어려움은 일부일 뿐, 핵심은 두려움</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Why We Fear to Think: The Hidden Barrier to Critical Thought<br><span class="green" style="font-size:7.5pt">대상(사고) + 관점(두려움이라는 숨은 장벽)</span></div>
+      <div class="wrong">× How to Develop Critical Thinking Skills <span class="wrong-tag">— 방향(처방 아님)</span></div>
+      <div class="wrong">× The Importance of Open-Mindedness <span class="wrong-tag">— 범위 과대</span></div>
+      <div class="wrong">× Laziness: The Enemy of Deep Thought <span class="wrong-tag">— 부분 언급(not just)</span><br><span style="font-size:7pt; color:#6B7280">laziness는 "표면적 이유"일 뿐, 핵심은 fear</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c3">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> controversial=정치/철학/윤리, far-fetched ideas도<br>세상에 영향, Non-Euclidean geometry 예시<br><b>[요약]</b> hard(표면) + afraid(핵심) 대비</div>
+    <div class="row-col"><b>[어법]</b> not just A but also B 병렬 / it will make them question<br>사역동사 make + 목적어 + 동사원형<br><b>[어휘]</b> challenged(도전받다) / probe(조사하다) / far-fetched(엉뚱한)</div>
+  </div>
+</div>
+
+<div class="guide">
+  <h3>📝 변형문제 풀 때 체크</h3>
+  <ul>
+    <li><b>"not just A but also B" 구조:</b> A(어려움)만 반영한 선지는 전환어 무시 함정. B(두려움)가 핵심.</li>
+    <li><b>shakes to the core:</b> 직역(물리적 흔들림)으로 해석한 선지는 함축 의미 미반영.</li>
+    <li><b>DNA 지문의 Baldwin:</b> 도입 장치일 뿐이므로, Baldwin이 주제인 선지는 즉시 소거.</li>
+    <li><b>Loyalty 지문의 cathedral:</b> "대성당"이라는 단어 자체보다, "대의를 위한 헌신"이라는 의미가 정답 근거.</li>
+  </ul>
+</div>
+
+
+<!-- ===== PAGE 2: 어법·어휘 ===== -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 3강 [2] — 어법·어휘</h1></div>
+<div class="title-sub">★★★★★ 거의 확실 · ★★★★☆ 높음 · ★★★☆☆ 보통 · <span style="color:#059669">■ 어법</span> · <span style="color:#DC2626">■ 어휘</span></div>
+
+<table class="gv-table">
+<thead><tr><th style="width:55px">지문</th><th style="width:44px">구분</th><th>원문 표현</th><th>변형 시 헷갈리는 이유</th><th style="width:52px">위험도</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><b>Employee<br>Loyalty</b></td><td><span class="tag-g">어법</span></td><td>it's not the work (we do) <b>that</b> inspires us</td><td>강조구문(It is ~ that): that → what 치환 시 구조 붕괴.<br><span class="red">강조구문에서 that은 관계대명사가 아님</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td><b>unless</b> you're an astronaut</td><td>unless = if not. unless → if 치환 시 의미 역전.<br><span class="red">"우주비행사가 아닌 이상" vs "우주비행사라면"</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>trumps</b> = 능가하다</td><td>Loyalty trumps pay. 다의어: 트럼프(카드)/이기다.<br><span class="red">어휘 적절성에서 "exceeds/outweighs" 치환 가능</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td rowspan="4"><b>DNA as<br>History</b></td><td><span class="tag-g">어법</span></td><td>a manifestation that was slowly <b>blended</b> and <b>accumulated</b></td><td>수동태 병렬: blended and accumulated 둘 다 수동.<br><span class="red">accumulated → accumulating 치환 시 병렬 파괴</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td><b>written</b> in simple code and <b>passed</b> down</td><td>과거분사 병렬: written과 passed가 앞의 명사를 수식.<br><span class="red">writing / passing으로 바꾸면 수식 구조 깨짐</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>pitiless</b> = 무자비한</td><td>"the most pitiless of all phenomena" = 가장 무자비한 현상.<br><span class="red">natural selection을 수식. pitiful(불쌍한)과 혼동 주의</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>vehicle</b> = 수단, 매개체</td><td>"vehicle of history" = 역사의 수레/매개체. 직역(차량) 함정.<br><span class="red">내용일치에서 "DNA는 역사의 운반체"로 패러프레이즈</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td rowspan="3"><b>Fear of<br>Thinking</b></td><td><span class="tag-g">어법</span></td><td>it will make them <b>question</b> their beliefs</td><td>사역동사 make + 목적어 + <b>동사원형</b>.<br><span class="red">question → to question / questioning 치환 = 오류</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>challenged</b> = 도전받다, 의문시되다</td><td>"assumptions are challenged" = 가정이 도전받다.<br><span class="red">challenged → changed(바뀌다)와 뉘앙스 다름. 도전≠변화</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>probe</b> = (깊이) 조사하다</td><td>"But probe even deeper" = 더 깊이 조사하다.<br><span class="red">prove(증명하다)와 철자 혼동 주의. probe ≠ prove</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+</tbody>
+</table>
+
+
+<!-- ===== PAGE 3: 서술형 ===== -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 3강 [2] — 서술형 대비</h1></div>
+<div class="title-sub">변형 출제 시 감점 포인트 중심 · 오타 1개 = -0.5~1점</div>
+
+<table class="sv-table" style="margin-top:8px">
+<thead><tr><th style="width:55px">지문</th><th>핵심 문장 (변형 소재)</th><th style="width:105px">변형 방식 예시</th><th style="width:100px">⚠ 감점 포인트</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><b>Employee<br>Loyalty</b></td><td>Loyalty (to a company) <b>trumps</b> pay and benefits.</td><td>• trumps 어휘 빈칸<br>• 능동→수동 전환<br>• to a company 위치</td><td class="warn-cell">• trumps 철자<br>• trumps = 능가하다<br>• loyalty 철자</td></tr>
+<tr><td>We don't want to come to work / <b>to build a wall</b>; we want to come to work / <b>to build a cathedral</b>.</td><td>• 대조 구조 배열형<br>• wall/cathedral 빈칸<br>• 함축 의미 서술</td><td class="warn-cell">• cathedral 철자!<br>• don't/do 대조<br>• to부정사 어순</td></tr>
+<tr><td rowspan="2"><b>DNA as<br>History</b></td><td>We are indeed <b>trapped</b> in this particular <b>vehicle</b> of history, <b>as much as</b> it is trapped in us.</td><td>• 배열형 유력<br>• trapped 빈칸<br>• as much as 구조</td><td class="warn-cell">• trapped 철자<br>• vehicle 철자<br>• as much as 어순</td></tr>
+<tr><td>DNA is <b>nothing but</b> history, one with a physical <b>manifestation</b>.</td><td>• nothing but 빈칸<br>• manifestation 영작<br>• 동격 구조</td><td class="warn-cell">• manifestation 철자<br>• nothing but = only<br>• one = history (대명사)</td></tr>
+<tr><td rowspan="2"><b>Fear of<br>Thinking</b></td><td>People don't want to think <b>not just</b> because it's hard, <b>but also</b> because they're afraid.</td><td>• not just A but also B 배열<br>• 접속사 구조 교정<br>• afraid 뒤 내용 영작</td><td class="warn-cell">• not just ~ but also 어순<br>• they're 축약<br>• afraid 철자</td></tr>
+<tr><td>This is one reason why we are so afraid of it: <b>it shakes us to the core</b>.</td><td>• 밑줄 표현 영작<br>• shake 시제 변환<br>• to the core 빈칸</td><td class="warn-cell">• shakes (3인칭 단수!)<br>• to the core 전치사<br>• 콜론(:) 뒤 구조</td></tr>
+</tbody>
+</table>
+
+<div class="guide mt">
+  <h3>🎯 선정고 패턴 — 서술형 변형 예상</h3>
+  <ul>
+    <li><b>어법 교정형:</b> "make them to question" → to 삭제 (사역동사) / "was slowly blended and accumulating" → accumulating → accumulated (병렬)</li>
+    <li><b>배열형:</b> cathedral 문장 "We don't want / to come to work / to build a wall / we want / to come to work / to build a cathedral" → 대조 구조 파악이 핵심</li>
+    <li><b>함축 의미 서술형:</b> "it shakes us to the core가 의미하는 바를 우리말로 쓰시오" → "비판적 사고는 우리의 근본적인 신념 체계를 송두리째 흔든다"</li>
+  </ul>
+</div>
+
+<div class="nav nav-bottom">
+  <a href="ch3-1.html">← 수특 3강 [1]</a>
+  <span class="current">수특 3강 [2]</span>
+  <a href="ch4-1.html">수특 4강 [1] →</a>
+</div>
+
+</body>
+</html>

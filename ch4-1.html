@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수특 4강 [1] — 선정고 내신 대비</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm 12mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #2D3436; font-size: 9pt; line-height: 1.55; background: #fff; }
+  .title-bar { background: linear-gradient(135deg, #0C1821 0%, #1B3A4B 100%); color: #fff; padding: 16px 20px 12px; border-radius: 8px 8px 0 0; }
+  .title-bar h1 { font-size: 15pt; font-weight: 800; letter-spacing: -0.3px; }
+  .title-sub { background: #162B37; color: #7F8C9B; padding: 5px 20px 7px; font-size: 8pt; border-radius: 0 0 8px 8px; margin-bottom: 10px; }
+  .pass-hdr { padding: 9px 16px; color: #fff; font-size: 11pt; font-weight: 700; margin-top: 14px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .pass-hdr .tag { font-size: 8.5pt; font-weight: 400; opacity: 0.85; }
+  .p1 { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+  .p2 { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+  .core-box { padding: 9px 16px; font-size: 10pt; font-weight: 700; border-left: 4px solid; }
+  .core-box.b1 { background: #EFF6FF; border-color: #3B82F6; color: #1E3A5F; }
+  .core-box.b2 { background: #F0FDFA; border-color: #14B8A6; color: #134E4A; }
+  .row { display: flex; border-bottom: 1px solid #E8ECF0; }
+  .row-label { width: 74px; min-width: 74px; background: #F1F5F9; padding: 7px 6px; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.35; }
+  .row-label.c1 { color: #2563EB; } .row-label.c2 { color: #0D9488; } .row-label.cw { color: #D97706; }
+  .row-body { flex: 1; display: flex; }
+  .row-col { flex: 1; padding: 7px 10px; font-size: 8.5pt; line-height: 1.55; border-left: 1px solid #E8ECF0; }
+  .red { color: #DC2626; font-weight: 600; } .green { color: #059669; font-weight: 600; } .gray { color: #9CA3AF; } .purple { color: #7C3AED; }
+  b { font-weight: 700; }
+  .sogo { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+  .sogo .row-label { background: #FEF3C7; }
+  .wrong { background: #FEF2F2; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; line-height: 1.45; }
+  .wrong-tag { color: #DC2626; font-size: 7.5pt; font-weight: 700; }
+  .right { background: #ECFDF5; padding: 4px 8px; margin: 3px 0; border-radius: 4px; font-size: 8pt; border-left: 3px solid #059669; line-height: 1.45; }
+  .guide { background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 9px 14px; margin-top: 6px; border-radius: 0 4px 4px 0; }
+  .guide h3 { color: #7C3AED; font-size: 9pt; margin-bottom: 4px; }
+  .guide li { font-size: 8pt; line-height: 1.55; margin-bottom: 2px; } .guide ul { padding-left: 16px; }
+  .tag-g, .tag-v { display: inline-block; white-space: nowrap; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 700; }
+  .tag-g { background: #ECFDF5; color: #059669; } .tag-v { background: #FEF2F2; color: #DC2626; }
+  .gv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .gv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .gv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .gv-table tr:nth-child(even) { background: #F8FAFC; }
+  .gv-table td:nth-child(5) { text-align: center; white-space: nowrap; }
+  .stars { font-weight: 700; white-space: nowrap; } .s5 { color: #DC2626; } .s4 { color: #D97706; } .s3 { color: #9CA3AF; }
+  .sv-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .sv-table th { background: #334155; color: #fff; padding: 6px 8px; font-size: 8pt; font-weight: 600; text-align: left; }
+  .sv-table td { padding: 6px 8px; font-size: 8pt; line-height: 1.5; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+  .sv-table tr:nth-child(even) { background: #F8FAFC; }
+  .warn-cell { background: #FEF2F2; color: #DC2626; font-weight: 600; font-size: 7.5pt; line-height: 1.45; }
+  .page-break { page-break-before: always; }
+  .mt { margin-top: 12px; }
+  .sogo-title { font-size: 8.5pt; font-weight: 700; margin-bottom: 4px; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: #F1F5F9; border-radius: 6px; margin-bottom: 10px; font-size: 8.5pt; }
+  .nav a { color: #2563EB; text-decoration: none; font-weight: 600; } .nav a:hover { text-decoration: underline; }
+  .nav .current { color: #64748B; font-weight: 400; }
+  .nav-bottom { margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="ch3-2.html">← 수특 3강 [2]</a>
+  <span class="current">수특 4강 [1]</span>
+  <a href="ch4-2.html">수특 4강 [2] →</a>
+</div>
+
+<div class="title-bar"><h1>수특 4강 [1] — 요지 파악</h1></div>
+<div class="title-sub">2027 수능특강 영어 · 내신 변형 대비 · 선지 소거 연습 · 100점 목표</div>
+
+<!-- PASSAGE GW: Coopetition -->
+<div class="pass-hdr p1">Gateway  Coopetition in the Sport Industry <span class="tag">[Part 1] 04 요지 파악 · Gateway</span></div>
+<div class="core-box b1">💡 스포츠 산업에서는 협력(collaboration)과 경쟁(competition)을 동시에 추구하는 '협력적 경쟁(coopetition)'이 존재하며, 둘의 균형을 잡는 것이 핵심이다.</div>
+
+<div class="row">
+  <div class="row-label c1">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>협력 (Collaboration)</b><br>→ 자원 효율성을 위해 협력해야 함<br>→ 정보 공유 필요 (share information)<br>→ 하지만 신중하게 (in a cautious manner)</div>
+    <div class="row-col"><b>경쟁 (Competition)</b><br>→ 잠재적으로 서로 경쟁해야 함<br>→ 성과(performance)를 위해 더 경쟁적<br>→ less collaborative 경향<br>→ 핵심: 하나를 다른 하나의 <b>희생(at the expense of)</b>으로 추구하면 안 됨</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">핵심 개념<br>+ 구조</div>
+  <div class="row-body">
+    <div class="row-col"><b>Coopetition 정의:</b><br>"the <b>simultaneous</b> pursuit of cooperation and competition among firms to <b>leverage</b> strategically important resources for <b>superior value creation</b>"<br><br><span class="red">★ simultaneous = 동시적 (핵심 키워드)</span><br><span class="red">★ leverage = 활용하다 (전략적)</span></div>
+    <div class="row-col"><b>논증 흐름:</b><br>① 스포츠 생태계 = 협력+경쟁 공존<br>② 정의: coopetition = 동시 추구<br>③ 신뢰와 확신(trust & confidence)이 최우선<br>④ 협력적이면서 경쟁적이려면 → 균형 필요<br>⑤ <b>결론: 하나를 다른 하나의 희생 없이 추구하는 계획 필요</b><br>→ "one is not neglected at the expense of the other"</div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 스포츠 산업에서 협력과 경쟁은 동시에 추구되어야 하며, 둘의 균형이 중요하다<br><span class="green" style="font-size:7.5pt">대상(스포츠) + 관점(동시 추구 + 균형) 모두 반영</span></div>
+      <div class="wrong">× 스포츠 산업에서 경쟁이 협력보다 중요하다 <span class="wrong-tag">— 방향 편향</span><br><span style="font-size:7pt; color:#6B7280">글은 둘의 "균형"을 말하지, 하나가 우선이라 안 함</span></div>
+      <div class="wrong">× 기업 간 협력만이 자원 효율성을 높인다 <span class="wrong-tag">— 범위 축소</span><br><span style="font-size:7pt; color:#6B7280">협력만 아니라 경쟁도 동시에 추구해야 함</span></div>
+      <div class="wrong">× 스포츠 관리자는 정보를 적극적으로 공유해야 한다 <span class="wrong-tag">— 강도 과장</span><br><span style="font-size:7pt; color:#6B7280">글은 "in a cautious manner" = 신중하게 공유한다고 함</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Coopetition: Balancing Collaboration and Competition in Sports<br><span class="green" style="font-size:7.5pt">핵심 개념(coopetition) + 관점(균형)</span></div>
+      <div class="wrong">× The Key to Winning: Why Competition Matters Most <span class="wrong-tag">— 방향 편향</span></div>
+      <div class="wrong">× Building Trust in Sport Organizations <span class="wrong-tag">— 부분 언급</span><br><span style="font-size:7pt; color:#6B7280">trust는 요소일 뿐 주제 아님</span></div>
+      <div class="wrong">× How to Share Resources Effectively in Sports <span class="wrong-tag">— 범위 축소</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> "협력만" 또는 "경쟁만" 강조하는 선지는 즉시 소거. 핵심은 "동시에(simultaneous)".</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c1">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> coopetition 정의, trust가 paramount,<br>cautious manner, at the expense of<br><b>[요약]</b> collaboration + competition → balance 구조</div>
+    <div class="row-col"><b>[어법]</b> being paramount (동명사구) / to leverage (to부정사)<br>placed on each activity (수동)<br><b>[어휘]</b> leverage / paramount / simultaneous / neglect</div>
+  </div>
+</div>
+
+<div style="margin-top:14px"></div>
+
+<!-- PASSAGE 1: Knowledge as Energy -->
+<div class="pass-hdr p2">❶ Knowledge as a Source of Human Energy <span class="tag">[Part 1] 04 요지 파악 #1</span></div>
+<div class="core-box b2">💡 "정보는 먹을 수 없다"지만, 우리가 먹는 음식은 수천 년 동안 축적된 농업 지식의 결과이며, 지식이 발전할수록 활용 가능한 에너지도 증가한다.</div>
+
+<div class="row">
+  <div class="row-label c2">핵심<br>대조축</div>
+  <div class="row-body">
+    <div class="row-col"><b>통념 (서론)</b><br>→ "You can't eat information"<br>→ 정보는 먹을 수 없다 = 정보의 한계<br>→ 맞는 말이다 (That may be so)</div>
+    <div class="row-col"><b>반전 (본론)</b><br>→ but 오늘 먹는 음식 = 수천 년 지식의 결과(fruit)<br>→ 어떤 씨앗, 어떤 도구, 어떤 시기, 어떤 관개법...<br>→ 태양 에너지를 <b>인간 지식의 렌즈(lens)</b>를 통해 변환<br>→ <b>지식 발전 → 활용 가능 에너지 증가</b></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">핵심 표현</div>
+  <div class="row-body">
+    <div class="row-col"><b>"through the lens of human knowledge"</b><br>= 인간 지식의 렌즈를 통해<br><br><span class="red">★ lens = 비유. 태양 에너지를 음식으로 변환하는 과정에서 "지식"이 필터/렌즈 역할</span><br><br><b>"more or less constant"</b><br>= 대략 일정한 (태양 에너지 총량은 변하지 않음)</div>
+    <div class="row-col"><b>논증 흐름:</b><br>① 정보는 못 먹음 (통념)<br>② But 음식 = 수천 년 농업 지식의 결과<br>③ 음식 = 태양 에너지의 변환물<br>④ 변환 도구 = 인간 지식 (the lens)<br>⑤ 태양 에너지 총량은 일정하지만<br>⑥ 지식이 발전할수록 활용 가능량 ↑<br>⑦ <b>결론: 지식 발전의 매 단계 = 에너지 증가</b></div>
+  </div>
+</div>
+
+<div class="row sogo">
+  <div class="row-label cw">선지 소거<br>연습</div>
+  <div class="row-body">
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [요지]로 나온다면?</div>
+      <div class="right">✓ 지식의 발전이 인간이 활용할 수 있는 에너지의 양을 증가시켜 왔다<br><span class="green" style="font-size:7.5pt">대상(지식) + 관점(에너지 활용 증가) 일치</span></div>
+      <div class="wrong">× 정보 기술의 발전이 농업 생산성을 높였다 <span class="wrong-tag">— 범위 축소</span><br><span style="font-size:7pt; color:#6B7280">"정보 기술"이 아니라 "지식 전반". 농업은 예시일 뿐</span></div>
+      <div class="wrong">× 태양 에너지가 인류 문명의 유일한 에너지원이다 <span class="wrong-tag">— 강도 과장</span><br><span style="font-size:7pt; color:#6B7280">"유일한"이라는 한정은 지문에 없음</span></div>
+      <div class="wrong">× 현대 식량 생산은 환경에 부정적 영향을 미친다 <span class="wrong-tag">— 근거 부재</span><br><span style="font-size:7pt; color:#6B7280">환경 영향은 전혀 다루지 않음</span></div>
+    </div>
+    <div class="row-col">
+      <div class="sogo-title">이 지문이 [제목]으로 나온다면?</div>
+      <div class="right">✓ Knowledge: The Lens That Unlocks Energy<br><span class="green" style="font-size:7.5pt">핵심 비유(lens) + 관점(에너지 활용)</span></div>
+      <div class="wrong">× You Can't Eat Information — Or Can You? <span class="wrong-tag">— 부분(도입부만)</span><br><span style="font-size:7pt; color:#6B7280">도입 문장을 제목으로 쓰면 결론이 빠짐</span></div>
+      <div class="wrong">× The History of Agriculture and Human Survival <span class="wrong-tag">— 범위 과대</span></div>
+      <div class="wrong">× Solar Energy: The Future of Food Production <span class="wrong-tag">— 관점 이탈</span><br><span style="font-size:7pt; color:#6B7280">미래 전망이 아니라 "지식의 역할" 분석</span></div>
+      <br><span style="font-size:7.5pt" class="purple"><b>소거 팁:</b> "you can't eat information"은 도입 장치. 이걸 그대로 주제로 쓴 선지는 소거.</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label c2">출제 전환</div>
+  <div class="row-body">
+    <div class="row-col"><b>[내용일치]</b> 태양 에너지는 more or less constant,<br>지식이 변환 도구, every step = energy increase<br><b>[요약]</b> information(못 먹음) → but knowledge(에너지 확대)</div>
+    <div class="row-col"><b>[어법]</b> What we eat (관계대명사 what) / filtered, concentrated,<br>and distilled (과거분사 병렬) / What's allowed us (현완)<br><b>[어휘]</b> flourish / sophisticated / fraction / tap into</div>
+  </div>
+</div>
+
+<div class="guide">
+  <h3>📝 변형문제 풀 때 체크</h3>
+  <ul>
+    <li><b>Coopetition 지문:</b> "협력 vs 경쟁" 중 하나만 강조하는 선지는 즉시 소거. 핵심은 "동시에(simultaneous) + 균형".</li>
+    <li><b>Knowledge 지문:</b> "you can't eat information"은 통념(도입). But 이후가 진짜 주제(지식→에너지).</li>
+    <li><b>at the expense of:</b> "~의 희생으로" → 내용일치에서 "하나를 포기한다"로 뒤집기 가능.</li>
+    <li><b>more or less:</b> "대략" → "정확히"로 바꾸면 오답. 강도 부사 항상 체크.</li>
+  </ul>
+</div>
+
+<!-- ===== PAGE 2: 어법·어휘 ===== -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 4강 [1] — 어법·어휘</h1></div>
+<div class="title-sub">★★★★★ 거의 확실 · ★★★★☆ 높음 · ★★★☆☆ 보통 · <span style="color:#059669">■ 어법</span> · <span style="color:#DC2626">■ 어휘</span></div>
+
+<table class="gv-table">
+<thead><tr><th style="width:55px">지문</th><th style="width:44px">구분</th><th>원문 표현</th><th>변형 시 헷갈리는 이유</th><th style="width:52px">위험도</th></tr></thead>
+<tbody>
+<tr><td rowspan="4"><b>Coopetition</b></td><td><span class="tag-g">어법</span></td><td>trust and confidence issues <b>being</b> paramount</td><td>독립분사구문: being → are 치환 시 주절과 연결 깨짐.<br><span class="red">분사구문에서 being은 "~이므로"의 의미</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td>the amount of emphasis <b>placed</b> on each activity</td><td>placed = 과거분사(수식). placing으로 바꾸면 능동이 되어<br><span class="red">"강조가 놓여지는" vs "강조가 놓는" = 의미 역전</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>leverage</b> = 활용하다</td><td>"to leverage strategically important resources"<br><span class="red">다의어: 지렛대/영향력/활용. 여기서는 "전략적 활용"</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>at the expense of</b> = ~의 희생으로</td><td>"one is not neglected at the expense of the other"<br><span class="red">내용일치에서 "하나를 희생한다"로 뒤집기 가능</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td rowspan="4"><b>Knowledge<br>as Energy</b></td><td><span class="tag-g">어법</span></td><td><b>What</b> we eat is solar energy, <b>filtered</b>, concentrated, and <b>distilled</b></td><td>What = 관계대명사. That으로 바꾸면 주어절 구조 깨짐.<br><span class="red">filtered/concentrated/distilled = 과거분사 병렬 3개</span></td><td><span class="stars s5">★★★★★</span></td></tr>
+<tr><td><span class="tag-g">어법</span></td><td><b>What's allowed</b> us to flourish</td><td>What has allowed (현재완료). What's = What has 축약.<br><span class="red">"What allowed"(과거) vs "What's allowed"(현완) 시제 차이</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>tap into</b> = ~을 활용하다</td><td>"energy we can tap into" = 활용할 수 있는 에너지.<br><span class="red">tap(두드리다) 직역 함정. tap into = 이용하다/접근하다</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+<tr><td><span class="tag-v">어휘</span></td><td><b>fraction</b> = 일부, 분수</td><td>"a still tiny fraction of that energy"<br><span class="red">fraction = 극히 일부. "전부"나 "대부분"으로 바꾸면 내용일치 오답</span></td><td><span class="stars s4">★★★★☆</span></td></tr>
+</tbody>
+</table>
+
+
+<!-- ===== PAGE 3: 서술형 ===== -->
+<div class="page-break"></div>
+<div class="title-bar"><h1>수특 4강 [1] — 서술형 대비</h1></div>
+<div class="title-sub">변형 출제 시 감점 포인트 중심</div>
+
+<table class="sv-table" style="margin-top:8px">
+<thead><tr><th style="width:55px">지문</th><th>핵심 문장 (변형 소재)</th><th style="width:105px">변형 방식 예시</th><th style="width:100px">⚠ 감점 포인트</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><b>Coopetition</b></td><td>Coopetition is defined as "the <b>simultaneous</b> pursuit of cooperation and competition among firms."</td><td>• 정의문 영작<br>• simultaneous 빈칸<br>• 수동태(is defined as)</td><td class="warn-cell">• simultaneous 철자!<br>• pursuit 철자<br>• is defined as 구조</td></tr>
+<tr><td>This will ensure one is not <b>neglected</b> <b>at the expense of</b> the other.</td><td>• at the expense of 빈칸<br>• neglected 어휘<br>• 이중부정 구조</td><td class="warn-cell">• neglected 철자<br>• at the expense of 전치사<br>• ensure 뒤 절 구조</td></tr>
+<tr><td rowspan="2"><b>Knowledge<br>as Energy</b></td><td><b>What</b> we eat is solar energy, <b>filtered</b>, concentrated, and <b>distilled</b> through the lens of human knowledge.</td><td>• What 관계대명사 교정<br>• 과거분사 병렬 배열<br>• the lens of 빈칸</td><td class="warn-cell">• What ≠ That<br>• filtered/distilled 철자<br>• through the lens of 전치사</td></tr>
+<tr><td>Every step in the advancement of our knowledge has brought <b>an increase</b> in the amount of energy we can <b>tap into</b>.</td><td>• 핵심 결론 영작<br>• tap into 빈칸<br>• advancement 어휘</td><td class="warn-cell">• advancement 철자<br>• has brought (현완)<br>• tap into (전치사)</td></tr>
+</tbody>
+</table>
+
+<div class="guide mt">
+  <h3>🎯 선정고 패턴 — 서술형 변형 예상</h3>
+  <ul>
+    <li><b>어법 교정형:</b> "That we eat is solar energy" → That → What / "energy, filtering, concentrated" → filtering → filtered (병렬)</li>
+    <li><b>배열형:</b> Coopetition 정의문 "the simultaneous pursuit / of cooperation / and competition / among firms / to leverage" → simultaneous 위치가 핵심</li>
+    <li><b>빈칸형:</b> "at the expense of the other" / "through the lens of human knowledge" / "tap into" 등 숙어적 표현이 빈칸 소재</li>
+    <li><b>요지 서술형:</b> "이 글의 요지를 한 문장으로 쓰시오" → Knowledge 지문: "지식의 발전은 인간이 활용할 수 있는 에너지의 양을 증가시킨다"</li>
+  </ul>
+</div>
+
+<div class="nav nav-bottom">
+  <a href="ch3-2.html">← 수특 3강 [2]</a>
+  <span class="current">수특 4강 [1]</span>
+  <a href="ch4-2.html">수특 4강 [2] →</a>
+</div>
+
+</body>
+</html>
